@@ -11,8 +11,8 @@
     "content_scripts": [
         {
             "matches": [
-                "http://*/*",
-                "https://*/*"
+                "http://at.activecampaign.com/*",
+                "https://at.activecampaign.com/*"
             ],
             "js": [
                 "js/content.js"
@@ -33,6 +33,6 @@
     "content_security_policy": "script-src 'self'; object-src 'self'",
     "author": "Kidon Chu (kchu@activecampaign.com)",
     "name": "jira project",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "haha"
 }
