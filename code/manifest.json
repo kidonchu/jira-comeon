@@ -3,7 +3,7 @@
   "icons": { "128": "images/icon.png" },
   "background": { "scripts": ["js/background.js"] },
   "content_scripts": [{
-    "matches": [ "http://*/*", "https://*/*" ],
+    "matches": [ "http://at.activecampaign.com/*", "https://at.activecampaign.com/*" ],
     "js": [ "js/content.js" ]
   }],
   "options_page": "html/options.html",
