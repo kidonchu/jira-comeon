@@ -18,7 +18,7 @@
 	require('./modules/msg').init('ct', handlers);
 
 	$('document').ready(function(){
-		$('body').on('click', 'a.lozenge,a.external-link,.link-title', function(e) {
+		$('body').on('click', 'a.lozenge,a.external-link,.link-title,.pullrequest-link', function(e) {
 			var url = e.currentTarget.href;
 			chrome.runtime.sendMessage({url: url}, function(){});
 			return false;
