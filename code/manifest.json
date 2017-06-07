@@ -4,7 +4,8 @@
   "background": { "scripts": ["js/background.js"] },
   "content_scripts": [{
     "matches": [ "http://at.activecampaign.com/*", "https://at.activecampaign.com/*" ],
-    "js": [ "js/content.js" ]
+    "js": [ "js/content.js" ],
+    "run_at": "document_end"
   }],
   "options_page": "html/options.html",
   "devtools_page": "html/devtools.html",
