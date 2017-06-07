@@ -1,7 +1,7 @@
 {
   "name": "jira-project",
   "version": "0.1.1",
-  "description": "Open JIRA external links in new tabs",
+  "description": "Open JIRA external links in new tabs and misc fixes",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
