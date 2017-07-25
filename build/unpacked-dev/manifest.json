@@ -16,7 +16,17 @@
             ],
             "js": [
                 "js/content.js"
-            ]
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://jiraplugin.zendesk.com/integrations/jira/notify-dialog*"
+            ],
+            "js": [
+                "js/content-zendesk.js"
+            ],
+            "all_frames": true
         }
     ],
     "options_page": "html/options.html",
@@ -32,7 +42,7 @@
     ],
     "content_security_policy": "script-src 'self'; object-src 'self'",
     "author": "Kidon Chu (kchu@activecampaign.com)",
-    "name": "jira project",
-    "version": "0.1.1",
-    "description": "haha"
+    "name": "jira-project",
+    "version": "0.1.2",
+    "description": "Open JIRA external links in new tabs and misc fixes"
 }
