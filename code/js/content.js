@@ -17,11 +17,14 @@
 	var handlers = require('./modules/handlers').create('ct');
 	require('./modules/msg').init('ct', handlers);
 
-	$('document').ready(function(){
-		$('body').on('click', 'a.lozenge,a.external-link,.link-title', function(e) {
-			var url = e.currentTarget.href;
-			chrome.runtime.sendMessage({url: url}, function(){});
-			return false;
-		});
+	$('body').on('click', 'a.lozenge,a.external-link,.link-title,.pullrequest-link', function(e) {
+		//if the user is holding down a meta key, they probably want a specific action
+		//for example, command + click opens a tab in the background
+		if(e.metaKey || e.ctrlKey) {
+			return;
+		}
+		var url = e.currentTarget.href;
+		chrome.runtime.sendMessage({url: url}, function(){});
+		return false;
 	});
 })();
